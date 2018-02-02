@@ -1,0 +1,191 @@
+EESchema Schematic File Version 2
+LIBS:TS1A-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:device.farm
+LIBS:TS1A-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R R2
+U 1 1 5762449B
+P 5750 5250
+F 0 "R2" V 5950 5250 50  0000 C CNN
+F 1 "270R" V 5850 5250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 5680 5250 50  0001 C CNN
+F 3 "" H 5750 5250 50  0000 C CNN
+	1    5750 5250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED-RESCUE-TSFWU01 D2
+U 1 1 57624710
+P 6100 5250
+F 0 "D2" H 6100 5050 50  0000 C CNN
+F 1 "LED" H 6100 5150 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 6100 5250 50  0001 C CNN
+F 3 "" H 6100 5250 50  0000 C CNN
+	1    6100 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 576248D3
+P 6300 5250
+F 0 "#PWR01" H 6300 5000 50  0001 C CNN
+F 1 "GND" H 6305 5077 50  0000 C CNN
+F 2 "" H 6300 5250 50  0000 C CNN
+F 3 "" H 6300 5250 50  0000 C CNN
+	1    6300 5250
+	0    -1   -1   0   
+$EndComp
+Text Label 5550 5250 2    60   ~ 0
+LED
+$Sheet
+S 3650 3500 1150 1100
+U 5777AEFB
+F0 "ESP" 60
+F1 "esp-usb.sch" 60
+F2 "ADC" I L 3650 4050 60 
+F3 "GPIO16" B R 4800 4150 60 
+F4 "GPIO14" B R 4800 4050 60 
+F5 "GPIO12" B R 4800 3850 60 
+F6 "GPIO13" B R 4800 3950 60 
+F7 "GPIO5" B R 4800 3750 60 
+F8 "GPIO4" B R 4800 3650 60 
+F9 "5V" O R 4800 4500 60 
+$EndSheet
+NoConn ~ 4800 3950
+NoConn ~ 4800 4050
+NoConn ~ 4800 4150
+Text Label 4900 3850 0    60   ~ 0
+LED
+NoConn ~ 3650 4050
+$Comp
+L LM75A U2
+U 1 1 579399DD
+P 6500 3750
+F 0 "U2" H 6600 4150 60  0000 C CNN
+F 1 "LM75A" H 6700 4050 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 6500 3750 60  0001 C CNN
+F 3 "" H 6500 3750 60  0000 C CNN
+	1    6500 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 57939B44
+P 6500 4150
+F 0 "#PWR02" H 6500 3900 50  0001 C CNN
+F 1 "GND" H 6505 3977 50  0000 C CNN
+F 2 "" H 6500 4150 50  0000 C CNN
+F 3 "" H 6500 4150 50  0000 C CNN
+	1    6500 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 57939DF8
+P 7000 4150
+F 0 "#PWR03" H 7000 3900 50  0001 C CNN
+F 1 "GND" H 7005 3977 50  0000 C CNN
+F 2 "" H 7000 4150 50  0000 C CNN
+F 3 "" H 7000 4150 50  0000 C CNN
+	1    7000 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 5250 5550 5250
+Wire Wire Line
+	4800 3850 4900 3850
+Wire Wire Line
+	6950 3650 7000 3650
+Wire Wire Line
+	7000 3650 7000 4150
+Wire Wire Line
+	6950 3750 7000 3750
+Connection ~ 7000 3750
+Wire Wire Line
+	6950 3850 7000 3850
+Connection ~ 7000 3850
+Wire Wire Line
+	4800 3650 6050 3650
+Wire Wire Line
+	4800 3750 6050 3750
+$Comp
+L R R1
+U 1 1 5793A92A
+P 5950 3450
+F 0 "R1" V 6150 3450 50  0000 C CNN
+F 1 "10k" V 6050 3450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 5880 3450 50  0001 C CNN
+F 3 "" H 5950 3450 50  0000 C CNN
+	1    5950 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR04
+U 1 1 5793A9E4
+P 5950 3300
+F 0 "#PWR04" H 5950 3150 50  0001 C CNN
+F 1 "VCC" H 5967 3473 50  0000 C CNN
+F 2 "" H 5950 3300 50  0000 C CNN
+F 3 "" H 5950 3300 50  0000 C CNN
+	1    5950 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR05
+U 1 1 5793AA3E
+P 6500 3350
+F 0 "#PWR05" H 6500 3200 50  0001 C CNN
+F 1 "VCC" H 6517 3523 50  0000 C CNN
+F 2 "" H 6500 3350 50  0000 C CNN
+F 3 "" H 6500 3350 50  0000 C CNN
+	1    6500 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3600 5950 3650
+Connection ~ 5950 3650
+NoConn ~ 6050 3850
+$EndSCHEMATC
